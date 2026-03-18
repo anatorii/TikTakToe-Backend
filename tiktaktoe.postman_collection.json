@@ -1,0 +1,522 @@
+{
+  "info": {
+    "_postman_id": "eb324562-f7b7-48aa-a785-a2bc3c34e6d6",
+    "name": "tiktaktoe",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31985127"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "login",
+              "value": "puser",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "1111",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8080/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "auth",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"login\":\"user\",\"password\":\"1111\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/auth",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "auth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "refresh",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"refresh_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTJkNjU4ZjgtOTQzOC00YzczLTg2N2MtZDJlMGI4ZGY0NDUxIiwibG9naW4iOiIiLCJpc3MiOiJ0aWt0YWx0b2UiLCJzdWIiOiJyZWZyZXNoIiwiZXhwIjoxNzcyNjcwMjE5LCJuYmYiOjE3NzI2Njg0MTksImlhdCI6MTc3MjY2ODQxOX0.AJtuTyO8UzKx_8atcNSteFbOkHpGjYzvG2x60G5qDHA\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/refresh",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "refresh"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "access",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"refresh_token\":\"l4TcLWMWlnOuTifVqSfoQPzk5oLbEvvRQBXpvOmoOqQ=\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/access",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "access"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user inkognito",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/user/93cd798e-4982-4bca-8306-58810b98ac26",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "user",
+            "93cd798e-4982-4bca-8306-58810b98ac26"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user current",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/user",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "games",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/game",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "games finished",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/game/finished",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "finished"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "games top",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"num_players\":10}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/game/top",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "top"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get game 2pl",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/game/7acef0fe-1f32-4c06-a41f-926e52560734",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "7acef0fe-1f32-4c06-a41f-926e52560734"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get game 1pl",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/game/2cc159bd-33dc-4d7c-a224-8be4e4b6eb3f",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "2cc159bd-33dc-4d7c-a224-8be4e4b6eb3f"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "join 2pl uly",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "localhost:8080/game/7acef0fe-1f32-4c06-a41f-926e52560734/join",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "7acef0fe-1f32-4c06-a41f-926e52560734",
+            "join"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "join 2pl inkog",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "localhost:8080/game/ab5b18ac-99ef-4f92-add5-bf16ec23dffc/join",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "ab5b18ac-99ef-4f92-add5-bf16ec23dffc",
+            "join"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "join 1pl",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/game/2cc159bd-33dc-4d7c-a224-8be4e4b6eb3f/join",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "2cc159bd-33dc-4d7c-a224-8be4e4b6eb3f",
+            "join"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "move 2pl user2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"move\": 8}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/game/7acef0fe-1f32-4c06-a41f-926e52560734/move",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "7acef0fe-1f32-4c06-a41f-926e52560734",
+            "move"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "move 2pl inkog",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"move\": 3}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/game/ab5b18ac-99ef-4f92-add5-bf16ec23dffc/move",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "ab5b18ac-99ef-4f92-add5-bf16ec23dffc",
+            "move"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "move 1pl",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"move\":6}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/game/2cc159bd-33dc-4d7c-a224-8be4e4b6eb3f/move",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "2cc159bd-33dc-4d7c-a224-8be4e4b6eb3f",
+            "move"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create 1pl",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"single\":1}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/game/create",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create 2p",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"single\":2}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/game/create",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "game",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTJkNjU4ZjgtOTQzOC00YzczLTg2N2MtZDJlMGI4ZGY0NDUxIiwibG9naW4iOiIiLCJpc3MiOiJ0aWt0YWx0b2UiLCJzdWIiOiJhY2Nlc3MiLCJleHAiOjE3NzI2NzM2MjMsIm5iZiI6MTc3MjY3MzMyMywiaWF0IjoxNzcyNjczMzIzfQ.nYv8w-G-xtLKwdBt8p-Baw-9AfaB-BngJiBmM329UKU",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
